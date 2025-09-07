@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go on a Date With Me?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-headline fade-in">So, I have a very important question…</h1>
+            <p class="hero-subtext fade-in-delay">Relax, it's way easier than solving a Rubik's cube.</p>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps">
+        <div class="container">
+            <div class="step fade-in">
+                <div class="step-icon">🌟</div>
+                <h3>Step 1: You</h3>
+            </div>
+            <div class="step fade-in-delay">
+                <div class="step-icon">🙋‍♂️</div>
+                <h3>Step 2: Me</h3>
+            </div>
+            <div class="step fade-in">
+                <div class="step-icon">🎉</div>
+                <div class="step-content">
+                    <h3>Step 3:</h3>
+                    <ul class="step-list">
+                        <li>Hang out and see where it goes</li>
+                        <li>Laugh at my bad jokes together</li>
+                        <li>Do something that'll make a good story</li>
+                        <li>Or… you suggest, I'm in</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Question Section -->
+    <section class="question">
+        <div class="container">
+            <h2 class="question-headline fade-in">So... will you go on a date with me?</h2>
+            <div class="buttons">
+                <button id="yesBtn" class="btn btn-primary bounce">YES! 🎉</button>
+                <button id="noBtn" class="btn btn-secondary">No 🙃</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Section -->
+    <section id="responseSection" class="response hidden">
+        <div class="container">
+            <h2 id="responseText"></h2>
+        </div>
+    </section>
+
+    <!-- Redirect Screen -->
+    <section id="redirectScreen" class="redirect-screen hidden">
+        <div class="container">
+            <h2>Please wait... redirecting 👀</h2>
+        </div>
+    </section>
+
+    <!-- No Sequence Screens -->
+    <div id="noSequence" class="no-sequence hidden">
+        <!-- Screen 1: First click on "No 🙃" -->
+        <div class="screen screen-1">
+            <h2>Are you sure? 🤔</h2>
+            <div class="buttons">
+                <button id="sureYes" class="btn btn-primary">Yes, I'm sure</button>
+                <button id="takeMeBack" class="btn btn-secondary">Ok but don't get used to it</button>
+            </div>
+        </div>
+        
+        <!-- Screen 2: If she clicks "Yes, I'm sure" -->
+        <div class="screen screen-2 hidden">
+            <h2>Hmm… that can't be right. Did you mis-tap? 📱</h2>
+            <div class="buttons">
+                <button id="oopsMyBad" class="btn btn-primary">Oops, my bad</button>
+                <button id="nopeStillNo" class="btn btn-secondary">Nope, still no</button>
+            </div>
+        </div>
+        
+        <!-- Screen 3: If she clicks "Nope, still no" -->
+        <div class="screen screen-3 hidden">
+            <h2>Wow, bold move. Just to confirm: you *don't* want pizza, ice cream, or bad jokes? 😏</h2>
+            <div class="buttons">
+                <button id="okayFineCoffee" class="btn btn-primary">Okay fine, maybe coffee…</button>
+                <button id="stillNo" class="btn btn-secondary">Still no</button>
+            </div>
+        </div>
+        
+        <!-- Screen 4: If she clicks "Still no" -->
+        <div class="screen screen-4 hidden">
+            <h2>Ouch. BTW I still can't see that you clicked no yet, you can still change your answer</h2>
+            <div class="buttons">
+                <button id="alrightTakeMeBack" class="btn btn-secondary">Fine, but only this once</button>
+                <button id="finalAnswerNo" class="btn btn-secondary">Final answer: no</button>
+            </div>
+        </div>
+        
+        <!-- Screen 5: If she clicks "Final answer: no" -->
+        <div class="screen screen-5 hidden">
+            <h2>Okay… but just know you're breaking the heart of this very cool, 100% not desperate webpage 💔</h2>
+            <div class="buttons">
+                <button id="letsGoBack" class="btn btn-primary">Ok whatever let's go</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with love in an attempt to make up for the low effort invitation</p>
+        </div>
+    </footer>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

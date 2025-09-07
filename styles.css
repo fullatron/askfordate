@@ -90,24 +90,9 @@ p {
     margin-bottom: 1rem;
 }
 
-.step-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.step-list li {
+.step-content p {
     margin-bottom: 0.8rem;
-    padding-left: 2rem;
-    position: relative;
-}
-
-.step-list li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #ff6b9d;
-    font-size: 1.5rem;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 /* Question Section */
@@ -311,7 +296,7 @@ footer {
     
     .step-content {
         display: inline-block;
-        text-align: left;
+        text-align: center;
         margin: 0 auto;
     }
     
